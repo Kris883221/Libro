@@ -1,0 +1,18 @@
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Catalogo.API.Models
+{
+    [Table("Categoria")]
+    public class Categoria
+    {
+        [Key]
+        [Column("IdCategoria")]
+        public int IdCategoria { get; set; }
+
+        [Required]
+        [StringLength(100)]
+        [Column("Nombre")]
+        public string Nombre { get; set; } = string.Empty;
+    }
+}
